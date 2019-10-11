@@ -129,6 +129,47 @@ class Board:
 
         return resultArray
 
+    def fromBoardtoBitsArray(self):
+        resultBitArray = []
+        for i in range(len(self.board)):
+            for j in range(len(self.board[i])):
+                binaryFormArray = self.intTo4Bits(self.board[i][j])
+                for k in range(4):
+                    resultBitArray.append(binaryFormArray[k])
+        return resultBitArray
+
+    def fromBitsArrayToBoard(self, bitsArray):
+        for i in range(len(self.board)):
+            for j in range(len(self.board)):
+                self.board[i][j] = self.bitsToInt(bitsArray[16*i+4*j:16*i+4*j+4])
+        return self.board
+
+
+
+    def intTo4Bits(self,number):
+        bitsArray = []
+        for i in range(4):
+            if(number%2 == 1):
+                bitsArray.append(1)
+                number = number/2 - 1
+            else:
+                bitsArray.append(0)
+                number = number/2
+        return list(reversed(bitsArray))
+
+    def bitsToInt(self, bitsArray):
+        intValue = 0
+        multipler = 8
+        for i in range(len(bitsArray)):
+            intValue = intValue + multipler*bitsArray[i]
+            multipler = multipler/2
+        return intValue
+
+
+
+
+
+
 
 
 

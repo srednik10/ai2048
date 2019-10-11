@@ -18,6 +18,9 @@ def run():
 
     board = Board()
 
+
+
+
     # def on_press(key):
     #     return
     #
@@ -42,7 +45,7 @@ def run():
     #     listener.join()
 
     while board.isAnyIndexAllowed():
-        # time.sleep(1)
+        time.sleep(1)
         randomInt = randint(0, 3)
         if randomInt == 0:
             board.upArrowClick()
@@ -55,5 +58,10 @@ def run():
         board.fillRandomIndex()
         print(board.moves)
         board.printBoard()
+        bitsBoard = board.fromBoardtoBitsArray()
+        print(bitsBoard)
+        board.fromBitsArrayToBoard(bitsBoard)
+        board.printBoard()
+
 
 run()
