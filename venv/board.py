@@ -4,9 +4,18 @@ from random import randint
 
 class Board:
 
+    isGameEnded = False
+
     moves = 0
 
     board = np.zeros((4, 4))
+
+    def __init__(self):
+        self.isGameEnded = False
+        self.moves = 0
+        self.board = np.zeros((4, 4))
+
+
 
     def printBoard(self):
         print(self.board)
@@ -32,6 +41,7 @@ class Board:
         randomCoordinates = allowedIndexes[randint(0, len(allowedIndexes))-1]
         xIndex = randomCoordinates[0]
         yIndex = randomCoordinates[1]
+
 
         if self.board[xIndex][yIndex] == 0:
             self.board[xIndex][yIndex] = 1

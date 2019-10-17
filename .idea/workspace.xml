@@ -13,8 +13,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/venv/game.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="62" column="32" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
+            <state relative-caret-position="289">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -25,11 +25,29 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/venv/board.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="147" lean-forward="true" selection-start-line="147" selection-end-line="147" />
+            <state relative-caret-position="289">
+              <caret line="17" selection-start-line="17" selection-end-line="18" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/tensorflow_core/python/layers/core.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="123">
+              <caret line="84" column="6" selection-start-line="84" selection-start-column="6" selection-end-line="84" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/keras/legacy/interfaces.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="90" selection-start-line="90" selection-end-line="90" />
             </state>
           </provider>
         </entry>
@@ -46,6 +64,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>range</find>
+      <find>moves</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -55,8 +74,9 @@
         <option value="$PROJECT_DIR$/venv/Scripts/__init__.py" />
         <option value="$PROJECT_DIR$/venv/Scripts/game.py" />
         <option value="$PROJECT_DIR$/venv/arrowsListener.py" />
-        <option value="$PROJECT_DIR$/venv/game.py" />
         <option value="$PROJECT_DIR$/venv/board.py" />
+        <option value="$PROJECT_DIR$/venv/game.py" />
+        <option value="$PROJECT_DIR$/venv/network.py" />
       </list>
     </option>
   </component>
@@ -153,14 +173,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2507903" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39761648" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.4073673" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -176,75 +195,94 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/venv/board.py</url>
-          <line>163</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="bitsArray.reverse()" language="Python" />
         <watch expression="bitsArray.reverse()" language="Python" />
+        <watch expression="target_f" language="Python" />
+        <watch expression="network.model.predict(statesMemory[i])" language="Python" />
+        <watch expression="movesMemory[i]" language="Python" />
+        <watch expression="reward" language="Python" />
+        <watch expression="network.model.predict(np.asarray([board.fromBoardtoBitsArray()])).max()" language="Python" />
         <watch expression="[1,2].reverse()" language="Python" />
         <watch expression="list(['a','v','c'].reverse())" language="Python" />
+        <watch expression="network.model.predict(np.asarray([board.fromBoardtoBitsArray()]))" language="Python" />
+        <watch expression="network.model.predict(np.asarray([board.fromBoardtoBitsArray()]))" language="Python" />
         <watch expression="list(reversed([1,3,4]))" language="Python" />
         <watch expression="[0,1,2,3,4,5][0:4]" language="Python" />
         <watch expression="bitsArray[16*0+4*0:16*0+4*0+4]" language="Python" />
+        <watch expression="board.fromBoardtoBitsArray()" language="Python" />
+        <watch expression="np.asarray(board.fromBoardtoBitsArray())).reshape(64, 1)" language="Python" />
+        <watch expression="np.asarray([1,2,3,4]).reshape(4,1)" language="Python" />
+        <watch expression="np.asarray([board.fromBoardtoBitsArray()]).shape" language="Python" />
+        <watch expression="np.argmax(nsArr)" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
+    <expressions id="breakpointCondition">
+      <expression>
+        <expression-string>self.moves == 0</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
     <expressions id="watch">
       <expression>
-        <expression-string>bitsArray[16*0+4*0:16*0+4*0+4]</expression-string>
+        <expression-string>network.model.predict(statesMemory[i])</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>[0,1,2,3,4,5][0:4]</expression-string>
+        <expression-string>network.model.predict(np.asarray([board.fromBoardtoBitsArray()])).max()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>list(reversed([1,3,4]))</expression-string>
+        <expression-string>movesMemory[i]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>list(['a','v','c'].reverse())</expression-string>
+        <expression-string>target_f</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>['a','v','c'].reverse()</expression-string>
+        <expression-string>reward</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>[1,2].reverse()</expression-string>
+        <expression-string>network.model.predict(np.asarray([board.fromBoardtoBitsArray()]))</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>bitsArray.reverse()</expression-string>
+        <expression-string>np.argmax(nsArr)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>bitsArray</expression-string>
+        <expression-string>np.asarray([board.fromBoardtoBitsArray()]).shape</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>self.intTo4BitsBinary(self.board[i][j])</expression-string>
+        <expression-string>np.asarray(board.fromBoardtoBitsArray()).shape</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>binaryFormArray[k]</expression-string>
+        <expression-string>np.asarray(board.fromBoardtoBitsArray()).shape()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -271,16 +309,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/arrowsListener.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/arrowsListener.py" />
     <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/keyboard/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -295,20 +324,70 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/keras/layers/core.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="101" column="8" selection-start-line="101" selection-start-column="8" selection-end-line="101" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/keras/engine/training_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="135" column="32" lean-forward="true" selection-start-line="135" selection-start-column="32" selection-end-line="135" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/tensorflow/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1541" />
+      </provider>
+    </entry>
+    <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/keras/legacy/interfaces.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="90" selection-start-line="90" selection-end-line="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/keras/backend/tensorflow_backend.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/venv/game.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="62" column="32" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
+        <state relative-caret-position="289">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/tensorflow_core/python/layers/core.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="84" column="6" selection-start-line="84" selection-start-column="6" selection-end-line="84" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/network.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+          <folding>
+            <element signature="e#1#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/venv/board.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="147" lean-forward="true" selection-start-line="147" selection-end-line="147" />
+        <state relative-caret-position="289">
+          <caret line="17" selection-start-line="17" selection-end-line="18" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
